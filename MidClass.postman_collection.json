@@ -42,7 +42,7 @@
 						{
 							"key": "photo",
 							"type": "file",
-							"src": "Igu9wtxkP/andrii-leonov-P5nZwlbTngI-unsplash.png"
+							"src": "M82TrU1OL/andrii-leonov-P5nZwlbTngI-unsplash.png"
 						}
 					]
 				},
@@ -179,6 +179,35 @@
 							"value": null,
 							"disabled": true
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "text搜尋po文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-sands-85089.herokuapp.com/posts-by-content",
+					"protocol": "https",
+					"host": [
+						"blooming-sands-85089",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts-by-content"
 					]
 				}
 			},
