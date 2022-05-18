@@ -42,7 +42,7 @@
           "
         >
           <ul class="dropDonw-List-Ul">
-            <router-link :to="`/personal-wall/${myUserId}`">
+            <router-link :to="`/personal-wall/6277d49f5b11695971e06846`">
               <li style="">我的貼文牆</li>
             </router-link>
             <router-link to="/modify-personal-profile">
@@ -86,8 +86,8 @@ export default {
     };
   },
   created() {
-    this.userTokenCheck(this.getUserInformation);
-    // this.getUserInformation();
+    // this.userTokenCheck(this.getUserInformation);
+    this.getUserInformation();
   },
   methods: {
     userTokenCheck(next) {
@@ -108,7 +108,8 @@ export default {
         });
     },
     getUserInformation() {
-      const id = this.myUserId;
+      // const id = this.myUserId;
+      const id = process.env.VUE_APP_USER_ID;
       const url = `https://blooming-sands-85089.herokuapp.com/user/${id}`;
 
       axios

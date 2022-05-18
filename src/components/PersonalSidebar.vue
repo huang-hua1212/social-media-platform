@@ -60,8 +60,8 @@ export default {
     };
   },
   mounted() {
-    this.userTokenCheck(this.getUserInformation);
-    // this.getUserInformation();
+    // this.userTokenCheck(this.getUserInformation);
+    this.getUserInformation();
   },
   methods: {
     userTokenCheck(next) {
@@ -83,7 +83,8 @@ export default {
     },
     getUserInformation() {
       this.isLoading = true;
-      const id = this.myUserId;
+      // const id = this.myUserId;
+      const id = process.env.VUE_APP_USER_ID;
       const url = `https://blooming-sands-85089.herokuapp.com/user/${id}`;
       axios
         .get(url)

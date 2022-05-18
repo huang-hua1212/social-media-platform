@@ -63,11 +63,6 @@
       </div>
     </div>
   </div>
-  <!-- Progress bar -->
-  <!-- <div style="position: relative">
-    <loading v-model:active="isLoading" :can-cancel="true" :is-full-page="true" />
-  </div> -->
-  <!-- <div class="loading"></div> -->
 </template>
 <script>
 import axios from 'axios';
@@ -88,7 +83,7 @@ export default {
     // Loading,
   },
   mounted() {
-    this.userTokenCheck();
+    // this.userTokenCheck();
   },
   methods: {
     userTokenCheck(next) {

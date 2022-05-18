@@ -155,13 +155,13 @@ export default {
       // isLikeClicked: false,
       isLoading: false,
       myUserInformation: {},
-      myUserId: '', // 主使用者
+      myUserId: process.env.VUE_APP_USER_ID, // 主使用者
       posts: [],
     };
   },
   mounted() {
-    this.userTokenCheck(this.getMyUserInformation);
-    // this.getMyUserInformation();
+    // this.userTokenCheck(this.getMyUserInformation);
+    this.getMyUserInformation();
     this.getPosts();
   },
   methods: {
@@ -189,7 +189,8 @@ export default {
       }, 80);
     },
     getMyUserInformation() {
-      const id = this.myUserId; // 主使用者
+      // const id = this.myUserId; // 主使用者
+      const id = process.env.VUE_APP_USER_ID; // 主使用者
       // const id = '627b5e55b50ea7cd805ddcca'; // 測試使用者
       const url = `${process.env.VUE_APP_API}/user/${id}`;
       console.log(url);
@@ -290,7 +291,8 @@ export default {
     },
     addLike(post_) {
       const post = post_;
-      const userId = this.myUserId; // 主使用者
+      // const userId = this.myUserId; // 主使用者
+      const userId = process.env.VUE_APP_USER_ID;
       const postId = post._id;
       const url = `${process.env.VUE_APP_API}/posts/${postId}`;
       const postReassign = post;

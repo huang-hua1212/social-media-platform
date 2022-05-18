@@ -171,8 +171,8 @@ export default {
     };
   },
   created() {
-    this.userTokenCheck(this.getUserInformation);
-    // this.getUserInformation();
+    // this.userTokenCheck(this.getUserInformation);
+    this.getUserInformation();
   },
   methods: {
     userTokenCheck(next) {
@@ -194,7 +194,8 @@ export default {
     },
     getUserInformation() {
       this.isLoading = true;
-      const id = this.myUserId; // 主使用者
+      // const id = this.myUserId; // 主使用者
+      const id = process.env.VUE_APP_USER_ID;
       // const id = '627a2742b2af092f54100b44'; // 客使用者
       // const id = '627b5e55b50ea7cd805ddcca'; // 客使用者
       const url = `${process.env.VUE_APP_API}/user/${id}`;
@@ -223,7 +224,8 @@ export default {
     },
     firstTabUpdateUserInformation_ByUrlImage() {
       this.isLoading = true;
-      const id = this.myUserId;
+      // const id = this.myUserId;
+      const id = process.env.VUE_APP_USER_ID;
       // const id = '6277d49f5b11695971e06846'; // 主使用者
       //  const id = '627a2742b2af092f54100b44'; // 客使用者
       const url = `${process.env.VUE_APP_API}/user/${id}`;
@@ -245,7 +247,8 @@ export default {
     },
     firstTabUpdateUserInformation_ByFormDataImage() {
       this.isLoading = true;
-      const id = this.myUserId;
+      // const id = this.myUserId;
+      const id = process.env.VUE_APP_USER_ID;
       // const id = '6277d49f5b11695971e06846';  // 主使用者
       // const id = '627a2742b2af092f54100b44'; // 客使用者
       // const id = '627b5e55b50ea7cd805ddcca'; // 客使用者
@@ -293,8 +296,8 @@ export default {
     secondTabUpdateUserInformation() {
       this.isLoading = true;
 
-      const id = this.myUserId;
-      // const id = '6277d49f5b11695971e06846'; // 主使用者
+      // const id = this.myUserId;
+      const id = '6277d49f5b11695971e06846'; // 主使用者
       const url = `${process.env.VUE_APP_API}/user/${id}`;
       const data = {
         password: this.secondPassword,
