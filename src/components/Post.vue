@@ -2,13 +2,15 @@
   <div></div>
 </template>
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
     };
   },
   mounted() {
-      this.userTokenCheck();
+    this.userTokenCheck();
   },
   methods: {
     userTokenCheck(next) {
