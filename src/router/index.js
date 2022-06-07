@@ -2,6 +2,16 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
   {
+    path: '/father',
+    name: 'Father',
+    component: () => import(/* webpackChunkName: "about" */ '../views/postMessageTest/Father.vue'),
+  },
+  {
+    path: '/son',
+    name: 'son',
+    component: () => import(/* webpackChunkName: "about" */ '../views/postMessageTest/Son.vue'),
+  },
+  {
     path: '/',
     name: 'Page1',
     component: () => import(/* webpackChunkName: "about" */ '../views/Page1.vue'),
