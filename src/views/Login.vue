@@ -4,7 +4,7 @@
       <div class="LeftImg"><img src="../../svg/img.svg" alt="Loading..." /></div>
       <div class="RightForm">
         <div class="title"><h>MetalWall</h></div>
-        <div class="subTitle"><h>到元宇宙展開全新社團</h></div>
+        <div class="subTitle"><h>_到元宇宙展開全新社團_</h></div>
         <Form v-slot="{ errors }" id="form" class="form" @submit="toCheckoutPayment2">
           <div class="email-div">
             <Field
