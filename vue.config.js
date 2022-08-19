@@ -9,6 +9,6 @@ module.exports = {
   //   publicPath: '/dist/', // 在此vscode用GoLive開啟
   // '/VueSpringClass_vuecli_version1/'
   // '/repoName/'
-  publicPath: process.env.NODE_ENV === 'production' ? '/node-spring-class_mid/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/social-media-platform/' : '/',
 
 };
