@@ -10,7 +10,7 @@
             <Field
               type="email"
               name="email"
-              class="email-input"
+              class="email-input" 
               v-model="email"
               rules="required|email"
               :class="{ 'is-invalid': errors['email'] }"
